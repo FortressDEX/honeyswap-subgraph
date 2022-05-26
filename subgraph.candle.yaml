@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: matic
+    network: candle
     source:
-      address: '0x03DAa61d8007443a6584e3d8f85105096543C19c'
+      address: '0x9432C17eA03B080a9a7d039426A684486c56895b'
       abi: Factory
-      startBlock: 14599890
+      startBlock: 1000000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -34,7 +34,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: matic
+    network: candle
     source:
       abi: Pair
     mapping:
