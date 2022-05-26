@@ -7,12 +7,14 @@
     "codegen:polygon": "graph codegen subgraph.polygon.yaml --output-dir src/types/",
     "codegen:xdai": "graph codegen subgraph.xdai.yaml --output-dir src/types/",
     "build:polygon": "graph build subgraph.polygon.yaml",
+    "build:candle": "graph build subgraph.candle.yaml",
     "build:xdai": "graph build subgraph.xdai.yaml",
-    "create-local": "graph create 1hive/honeyswap --node http://127.0.0.1:8020",
-    "deploy-local:polygon": "graph deploy 1hive/honeyswap subgraph.polygon.yaml --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "deploy-local:xdai": "graph deploy 1hive/honeyswap subgraph.xdai.yaml --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "deploy:polygon": "graph deploy 1hive/honeyswap-polygon subgraph.polygon.yaml --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
-    "deploy:xdai": "graph deploy 1hive/honeyswap-xdai subgraph.xdai.yaml --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug"
+    "create-local": "graph create candlelabs/honeyswap --node http://127.0.0.1:8020",
+    "deploy-local:polygon": "graph deploy candlelabs/honeyswap subgraph.polygon.yaml --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "deploy-local:xdai": "graph deploy candlelabs/honeyswap subgraph.xdai.yaml --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "deploy:polygon": "graph deploy candlelabs/honeyswap-polygon subgraph.polygon.yaml --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
+    "deploy:candle": "graph deploy candlelabs/honeyswap-candle subgraph.candle.yaml --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
+    "deploy:xdai": "graph deploy candlelabs/honeyswap-xdai subgraph.xdai.yaml --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.19.0",

@@ -9,6 +9,7 @@ export function getFactoryAddress(): string {
   if (network == 'mainnet') return '0xd34971bab6e5e356fd250715f5de0492bb070452'
   if (network == 'xdai') return '0xa818b4f111ccac7aa31d0bcc0806d64f2e0737d7'
   if (network == 'matic') return '0x03daa61d8007443a6584e3d8f85105096543c19c'
+  if (network == 'candle') return '0x9432C17eA03B080a9a7d039426A684486c56895b'
   log.warning('no factory address for unsupported network {}', [network])
   return ADDRESS_ZERO
 }
@@ -19,6 +20,7 @@ export function getNativeCurrencyWrapperAddress(): string {
   if (network == 'mainnet') return '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
   if (network == 'xdai') return '0xe91d153e0b41518a2ce8dd3d7944fa863463a97d'
   if (network == 'matic') return '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270'
+  if (network == 'candle') return '0x85FA00f55492B0437b3925381fAaf0E024747627'
   log.warning('no native currency wrapper address for unsupported network {}', [network])
   return ADDRESS_ZERO
 }
@@ -75,6 +77,14 @@ export function getLiquidityTrackingTokenAddresses(): string[] {
       '0x4de7fea447b837d7e77848a4b6c0662a64a84e14' // WAVE
     ]
   }
+  if (network == 'candle') {
+    return [
+      '0x85FA00f55492B0437b3925381fAaf0E024747627', // WCNDL
+      '0xad43669cbAC863e33449d423261E525de8da0Ff4', // DAI
+      '0xb750990F953B36F806d0327678eCFB4eEFd16979', // WETH
+      '0xa018034190943D6c8E10218d9F8E8Af491272411' // SHIBA
+    ]
+  }
   log.warning('no liquidity tracking token address for unsupported network {}', [network])
   return []
 }
@@ -85,6 +95,7 @@ export function getUsdcNativeCurrencyWrapperPairAddress(): string {
   if (network == 'mainnet') return '0x98f29f527c8e0ecc67a3c2d5567833bee01f2a12'
   if (network == 'xdai') return ADDRESS_ZERO
   if (network == 'matic') return '0x86b7249272fabb82ef36550ef898ea539225e7f0'
+  if (network == 'candle') return '0xde4f09eDa12bdc29E7C30d89821A68d29C6c339B' // confirmed works for now
   log.warning('no usdc native currency wrapper pair address for unsupported network {}', [network])
   return ADDRESS_ZERO
 }
@@ -95,6 +106,7 @@ export function getDaiNativeCurrencyWrapperPairAddress(): string {
   if (network == 'mainnet') return '0x7515be43d16f871588adc135d58a9c30a71eb34f'
   if (network == 'xdai') return ADDRESS_ZERO
   if (network == 'matic') return '0xcba9d57e29ab4eeb9aa69cd82f93b64505055a3b'
+  if (network == 'candle') return '0x85FA00f55492B0437b3925381fAaf0E024747627' // WCNDL for now
   log.warning('no dai native currency wrapper pair address for unsupported network {}', [network])
   return ADDRESS_ZERO
 }
