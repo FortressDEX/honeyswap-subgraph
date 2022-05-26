@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: Blue is a decentralized protocol for automated token exchange on Candle/Polygon.
-repository: https://github.com/1Hive/honeyswap-subgraph
+repository: https://github.com/FortressDEX/honeyswap-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
