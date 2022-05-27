@@ -14,6 +14,13 @@ This subgraph dynamically tracks any pair created by the honeyswap factory. It t
 
 Make sure to update package.json settings to point to your own graph account.
 
+
+## Deplying steps
+- Create a new graph on your dashboard on the graph page
+- npm install -g @graphprotocol/graph-cli@0.21 (latest version does not work with the API version used in our source)
+- graph auth --product hosted-service <accessTokenFromGraphDashboardPage>
+- yarn deploy:candle
+
 ## Queries
 
 Below are a few ways to show how to query the honeyswap-subgraph for data. The queries show most of the information that is queryable, but there are many other filtering options that can be used, just check out the [querying api](https://thegraph.com/docs/graphql-api). These queries can be used locally or in The Graph Explorer playground.
